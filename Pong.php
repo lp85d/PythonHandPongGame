@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hand Pong Game</title>
+    <title>Hand Ping Pong Game</title>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils"></script>
     <style>
@@ -27,15 +27,37 @@
         #output_canvas {
             border: 2px solid black;
         }
+		footer {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+        }
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div id="game-container">
-        <h1>Hand Pong Game <input type="range" id="speed" min="1" max="10" value="4"></h1>
+<h1>
+    Hand <a href="https://parserposter.ru/ping/">Ping</a> 
+    <a href="https://parserposter.ru/pong/">Pong</a> 
+    Game 
+    <input type="range" id="speed" min="1" max="10" value="4">
+</h1>
         <video id="input_video" style="display:none;"></video>
         <canvas id="output_canvas" width="800" height="600"></canvas>
     </div>
-
+    <footer>
+        <p>Исходный код доступен на <a href="https://github.com/lp85d/PythonHandPongGame" target="_blank">GitHub</a></p>
+    </footer>
     <script>
         const videoElement = document.getElementById('input_video');
         const canvasElement = document.getElementById('output_canvas');
